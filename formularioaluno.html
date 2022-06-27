@@ -1,0 +1,143 @@
+<html>
+    <head> 
+	    <meta charset="utf-8">
+	<title>página de cadastro de aluno</title> 	
+	</head>
+	<body>
+	 <style>
+         {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
+        }
+
+        .cabecalho {
+            background: #333;
+            border-bottom: solid 5px #4faddb;
+            height: 90px;
+            box-sizing: content-box;
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        .menu-toggle {
+            float: right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+
+        .menu {
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+        }
+
+        .menu a {
+            padding: 15px;
+        }
+
+
+        .destaque {
+            background: #f50a31;
+            color: #fff;
+        }
+
+        @media(min-width: 679px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        @media(max-width: 680px) {
+            .menu {
+                display: none;
+            }
+        }
+
+        @media(max-width: 910px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li> 
+		<a href="apresentacao.html">Início</a>
+                </li>
+             
+            </ul>
+	<font color ="white"><p>Cadastro de alunos:</font></p>
+        </nav>
+	</body>
+	
+	   <table>
+	 <tr> 
+             <td><p> Matricula: </td></p>
+             <td><input type="text" name="name_form"/></td>
+	 <tr>
+             <td><p> Nome: </td></p>
+             <td><input type="text" name="name_form"/></td>
+	 <tr>
+		<td> Curso:</td>
+             <td><input type="text" name="email_form"/></td>
+	 <tr> 
+             <td><p> Endereço: </td></p>
+             <td><input type="text" name="end_form"/></td>
+	 <tr>
+
+	       <td> Senha: </td>
+             <td><input type="password" name="senha"/></td>
+		 </tr>	 
+		 </tr>
+		 </tr>
+    		 </tr>
+		 </tr>
+	   </table>
+
+</body>
+</html>
