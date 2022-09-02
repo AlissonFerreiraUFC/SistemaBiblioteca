@@ -12,92 +12,56 @@
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
+        body { /*Esse body está formandando o corpo principal colocando um gradient de um tom verde a um outro verde em tonalidade diferente*/
+            --margin: 0;  
             font-family: 'Oswald', sans-serif;
             background-image: linear-gradient(to  right, #31d648, rgb(17, 54, 71));
         }
 
-        .cabecalho {
+        .cabecalho { /*Aqui é a formatação do cabeçalho onde tem essa listra quase preta no menu e em varias telas, na parte onde ficam botoes, como inicio e etc*/
             background: #333;
-            border-bottom: solid 5px #333;
             height: 80px;
             box-sizing: content-box;
         }
 
-        .menu {
+        .menu {/* Nesse conjunto de comando, amos trabalhar a posição dos boto~es no meno*/
             display: inline-block;
             vertical-align: top;
             height: 80px;
             padding: 25px;
         }
 
-        .menu ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        .menu li {
-            display: inline-block;
-        }
-
-        .cabecalho a {
+        .cabecalho a { /*estilo da fonte do cabeçalho*/
             text-decoration: none;
             color: #eee;
             font-size: 1.3em;
         }
 
-        .menu a {
-            padding: 15px;
-        }
+        
 
-        .autenticacao {
+        .autenticacao {/*posição do botões a esquerda os de Login ou Registrar*/
             float: right;
             height: 80px;
             padding: 25px;
         }
 
-        .menu a:hover,
-        .menu a.selected {
-            background-color: #4faddb;
-            color: #000;
-        }
 
-        .botao {
+        .botao { /*Edição da clase botão*/
             border-radius: 30px;
             padding: 10px 25px;
             margin: 10px;
         }
 
-        .destaque {
+        .destaque {/*cor do botão, nesse caso o registrar*/
             background: red;
         }
 
-        @media(min-width: 679px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
-
-        @media(max-width: 680px) {
-            .menu {
-                display: none;
-            }
-        }
-
-        @media(max-width: 910px) {
-            .autenticacao {
-                display: none;
-            }
-        }
     </style>
 </head>
 
 <body>
     <header class="cabecalho">
         <div class="logo">
-            <a href="#inicio">
-            </a>
         </div>
         <button class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
@@ -105,20 +69,20 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="apresentacao.html">Início</a>
+                    <a href="apresentacao.html">Início</a><!-- refencia do botão de inicio -->
                 </li>
                
             </ul>
         </nav>
-        <aside class="autenticacao">
-            <a href="#login">Login</a>
+        <aside class="autenticacao"><!-- Nessa classe, construimos os dois botões, passando como referencia os endereços que eles vão direcionar-->
+            <a href="login.php">Login</a>
             <a href="tipo.html" class="botao destaque">Registrar</a>
         </aside>
     </header>
-	 <center><h1>Biblioteca UFC</h1> 
+	 <center><h1>Biblioteca UFC</h1> <!-- uso do comando h1, para indicar um titulo e logo abaixo um paragrafo através do <p> -->
 	  <p> Bem-vindos a bibliteca da Universidade Federal do Ceará, aqui os alunos poderão ter seus conhecimentos ampliados e lapidados mediantes a leitura e estudo. </p></center>
 	  
-	  <center><img src="banner.png" alt="Biblioteca UFC"/></center>
+	  <center><img src="banner.png" alt="Biblioteca UFC"/></center> <!-- comando pra inserid uma imagem, dentro do comando center para centralizar-->
 </body>
 
 </html>

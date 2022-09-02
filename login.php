@@ -1,3 +1,38 @@
+<?php
+	
+	if(isset($_POST['submit']))
+	{
+		$usuario = $_POST['usuario'];
+		$senha = $_POST['senha'];
+
+
+		if(($usuario == 'Admin') and ($senha == 'root'))
+		{
+			header('location: admini.php');
+		}
+		else 
+		{
+		 if(($usuario == 'aluno') and ($senha == '123'))
+			{
+				header('location: p_aluno.php');
+			}
+			else
+			{
+				if(($usuario == 'prof') and ($senha == '1234'))
+				{
+					header('location: p_prof.php');
+				}
+				else{
+
+						if(($usuario == 'bibli') and ($senha == '123'))
+				{
+					header('location: p_bibli.php');
+				}
+				}
+			}
+		}
+	}
+?>
 <html>
     <head> 
 	    <meta charset="utf-8">
@@ -113,6 +148,14 @@
 		color: white;
 		text-align: center;
 	    } 
+	    .inputsubmit{
+	        background-image: linear-gradient(to  right, rgb(17, 54, 71),#31d648);
+			width: 100%;
+			padding: 15px;
+			border: none;
+			font-size: 15px;
+			cursor: pointer;
+	    }
     </style>
 </head>
 
@@ -133,22 +176,28 @@
 	<br><br>
 <body>
 	<div class ="box">
-	    <form action="">
-		<fieldset>
-		    <legend><b>Escolha o tipo de cadastro</b></legend>
-   <br>
-		<br><br>
-	<a href="aluno.php">
-	<div class = "button">- Aluno </div></a>	
-	<br><br>	
-	<a href="professor.php">
-	<div class = "button">- Professor </div></a>
-	<br><br>
-	<a href="funcionario.php">
-	<div class = "button">- Funcionário </div></a>
-		</fieldset>
-	     </form>
+		<form action="login.php" method="POST">    
+		    <form action="testeLogin.php" method="POST">
+		    	<form action="pequisar.php" method="POST">
+				<fieldset>
+				    <legend><b>Login</b></legend>
+		  <br>
+				    <div class= "inputBox">
+					<input type="text" name="usuario" id="usuario" class="inputUser" required>
+					<label for="usuario">Usuário</label>
+				    </div>
+				    <br>
+				    <div class= "inputBox">
+				    <input type="password" name="senha" id="senha" class="inputUser" required>
+					<label for="senha">Senha</label>
+				    </div>
+				    <br>
+				    <br>
+				    <input class = "inputsubmit" type = "submit" name = "submit" values = "Enviar">
+				</fieldset>
+				 </form>
+		    </form>
+		</form>    
 	</div>
-</body>
 </body>
 </html>

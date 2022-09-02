@@ -1,18 +1,17 @@
 <html>
-    <head> 
+<head> 
 	    <meta charset="utf-8">
-	<title>página de cadastro</title> 	
-	</head>
-	<body>
+		<title>Bem-vindo!</title> 	
+</head>
+<body>
 	 <style>
          {
             box-sizing: border-box;
-        }
+         }
 
         body {
             margin: 0;
 	    font-family: 'Oswald', sans-serif;
-            background-image: linear-gradient(to  right, #31d648, rgb(17, 54, 71));
 	    }
 
         .cabecalho {
@@ -28,6 +27,7 @@
             height: 80px;
             padding: 25px;
         }
+
         .menu ul {
             margin: 0;
             padding: 0;
@@ -47,10 +47,26 @@
             padding: 15px;
         }
 
+        .autenticacao {
+            float: right;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu a:hover,
+        .menu a.selected {
+            background-color: #4faddb;
+            color: #000;
+        }
+
+        .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
 
         .destaque {
-            background: #f50a31;
-            color: #fff;
+            background: red;
         }
 
         @media(min-width: 679px) {
@@ -70,48 +86,34 @@
                 display: none;
             }
         }
-	.box{
+        .box{
 	    	position: absolute;
 	    	top: 50%;
 	    	left: 50%;
-		transform: translate(-50%, -50%);
-	        background-color: black;
-	        color:white;
-		padding: 15px;
-		border-radius: 10%;
-		width: 20%;
+			transform: translate(-50%, -50%);
 	    }
 	    fieldset {
-	    	border: 5px groove #31d648;
+	    	border: 5px groove blueviolet;
+	    	text-align: center;
+	    	width:600px;
 	    }
 	    legend {
-	    	border: 1px groove mediumseagreen;
+	    border: 3px groove slateblue;
 		padding: 10px;
 		text-align: center;
-		background-color:mediumseagreen;
-		color: black;
-	    }
-	    .inputBox{
-	    position: relative;
-	    }
-	    .inputUser{
-		background: none;
-		border: none;
-		border-bottom: 1px solid white;
-		color:white;
-		font-size: 15px;
-		outline: none;
-		width: 100%;	
+		background-image: linear-gradient(to  right, blueviolet,black);
+		color: white;
 	    }
 	    .button{
-	        background-image: linear-gradient(to  right, rgb(17, 54, 71),#31d648);
-		
-		width: 93%;
-		padding: 8px;
-		border: none;
-		font-size: 15px;
-		color: white;
-		text-align: center;
+	    	background-image: linear-gradient(to  right, blueviolet,black);
+			width: 50%;
+			padding: 8px;
+			margin-left: auto;
+			margin-right: auto; 
+			border: none;
+			font-size: 15px;
+			color: white;
+			text-align: center;
 	    } 
     </style>
 </head>
@@ -119,36 +121,40 @@
 <body>
     <header class="cabecalho">
         <div class="logo">
+            <a href="#inicio">
+            </a>
         </div>
         <button class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
         </button>
         <nav class="menu">
             <ul>
-                <li> 
-		<a href="apresentacao.html">Início</a>
+                <li>
+                    <a href="p_aluno.php">Início</a>
                 </li>
+               
+            </ul>
         </nav>
-	</body>
-	<br><br>
+        <aside class="autenticacao">
+            <a href="sair.php" class="botao destaque">Sair</a>
+        </aside>
+    </header>
+	 </style>
 <body>
 	<div class ="box">
 	    <form action="">
 		<fieldset>
-		    <legend><b>Escolha o tipo de cadastro</b></legend>
+		    <legend><b>O que deseja fazer?</b></legend>
    <br>
 		<br><br>
-	<a href="aluno.php">
-	<div class = "button">- Aluno </div></a>	
+	<a href="pesquisar_liv.php">
+	<div class = "button">- Pequisar Livro </div></a>	
 	<br><br>	
 	<a href="professor.php">
-	<div class = "button">- Professor </div></a>
+	<div class = "button">- Meus livros </div></a>
 	<br><br>
-	<a href="funcionario.php">
-	<div class = "button">- Funcionário </div></a>
 		</fieldset>
 	     </form>
 	</div>
-</body>
 </body>
 </html>
